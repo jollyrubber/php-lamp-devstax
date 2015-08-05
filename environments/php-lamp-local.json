@@ -1,0 +1,9 @@
+{
+    "name": "lamp-local",
+    "description": "Linux/Apache/MySQL/PHP - Environment",
+    "json_class": "Chef::Environment",
+    "chef_type": "environment",
+    "cookbook_versions": {},
+    "default_attributes": {},
+    "override_attributes": {}
+}

@@ -1,0 +1,27 @@
+{
+    "name": "lamp-developer",
+    "description": "Linux/Apache/MySQL/PHP - Server Role",
+    "json_class": "Chef::Role",
+    "chef_type": "role",
+    "default_attributes": {},
+    "override_attributes": {
+        "ark": {
+            "package_dependencies": ["multitail"]
+        },
+        "chef-devstax": {
+            "mysql": {
+                "version": "5.6"
+            }
+        }
+    },
+    "run_list": [
+        "recipe[apt]",
+        "recipe[ark]",
+        "recipe[php5_ppa::from_ondrej]",
+        "recipe[php]",
+        "recipe[apache2]",
+        "recipe[apache2::mod_php5]",
+        "recipe[chef-devstax::mysql]"
+    ],
+    "env_run_lists": {}
+}

@@ -1,0 +1,14 @@
+{
+    "name": "lamp-developer",
+    "description": "Linux/Apache/MySQL/PHP - Developer Role",
+    "json_class": "Chef::Role",
+    "chef_type": "role",
+    "default_attributes": {},
+    "override_attributes": {},
+    "run_list": [
+        "role[php-lamp-server]",
+        "recipe[composer]",
+        "recipe[chef-devstax::gitflow]"
+    ],
+    "env_run_lists": {}
+}
