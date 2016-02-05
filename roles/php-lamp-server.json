@@ -10,6 +10,7 @@
         },
         "chef-devstax": {
             "mysql": {
+                "rootpasswd": "password",
                 "version": "5.6"
             }
         }

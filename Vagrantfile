@@ -37,7 +37,7 @@ Vagrant.configure("2") do |config|
         group: "www-data",
         mount_options: ["dmode=775,fmode=774"]
 
-    config.vm.box = "chef/ubuntu-14.04"
+    config.vm.box = "bento/ubuntu-15.04"
     config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
     config.vm.network "forwarded_port", guest: 3306, host: 3306, auto_correct: true
 
